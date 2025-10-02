@@ -1,0 +1,282 @@
+/* Reset & Osnovni stil */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(226, 221, 214);
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+/* Navigacija */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(226, 221, 214);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #222;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #222;
+  transition: width 0.3s;
+  margin: auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 40px;
+}
+
+.logo img {
+  height: 55px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Kontakt sekcija */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f5f3f0, #e9e6e3);
+}
+
+.contact-content {
+  max-width: 650px;
+  width: 100%;
+  background-color: #fff;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.contact-content h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.contact-content h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #222;
+  margin: 12px auto 30px auto;
+}
+
+.contact-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #444;
+}
+
+/* Forma */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #fff;
+  border-color: #222;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34,34,34,0.1);
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-top: 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #222;
+  color: #fff;
+  padding: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Info ispod forme */
+.contact-info {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info a {
+  font-weight: 500;
+  color: #222;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-info img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 28px;
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Animacija fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 40px 25px;
+  }
+
+  .contact-content h1 {
+    font-size: 28px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+.web {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+}
+
+.web a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.5); /* poluprovidna pozadina da paše na sve dizajne */
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.web a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.web .social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}

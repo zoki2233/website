@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="kontakt.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/Logo crno.png" type="image/png">
+  <script defer src="animations.js"></script>
+
+  <!-- Flatpickr stil i skripte -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/sr.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/Logo crno.png" alt="Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">POČETNA</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="omeni.html">O MENI</a>
+      <a href="kontakt.html">KONTAKT</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <div class="contact-content fade-in">
+      <h1>Kontakt</h1>
+      <p>Slobodno mi piši za bilo kakvu saradnju, pitanje ili ideju. Radujem se tvojoj priči.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/mldpngjo" method="POST">
+        <input type="text" name="ime" placeholder="Vaše Ime i Prezime" required />
+        <input type="email" name="email" placeholder="Vaša email adresa" required />
+        <input type="tel" name="telefon" placeholder="Vaš broj telefona" required />
+
+        <label for="termin">Datum i vrijeme</label>
+        <!-- Flatpickr input -->
+        <input type="text" name="termin" id="termin" placeholder="Odaberi datum i vrijeme" required />
+
+        <input type="text" name="lokacija" placeholder="Lokacija" required />
+        <textarea name="napomena" placeholder="Napomena / detalji..." rows="4"></textarea>
+
+        <button type="submit">Pošalji rezervaciju</button>
+      </form>
+
+      <div class="contact-info">
+        <p>
+          <img src="img/social.png" alt="IG" />
+          <a href="https://instagram.com/jascurr" target="_blank">@jascurr</a>
+        </p>
+        <p>
+          <img src="img/social.png" alt="IG" />
+          <a href="https://instagram.com/shotbyjascur" target="_blank">@shotbyjascur</a>
+        </p>
+        <p>
+          <img src="img/youtube.png" alt="youtube">
+          <a href="https://youtube.com/@lukajascur?si=mILBRkIIyneGF3Vu">Youtube kanal</a>
+        </p>
+        <div style="margin-top:30px; text-align:center;">
+          <p>Želiš odmah da saznaš cenu i dodatne detalje?</p>
+          <a href="tel:+381652089814" class="contact-button-a">📞 Pozovi direktno</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Flatpickr inicijalizacija -->
+  <script>
+    flatpickr("#termin", {
+      enableTime: true,
+      time_24hr: true,
+      dateFormat: "d.m.Y H:i",
+      locale: "sr"
+    });
+  </script>
+
+  <div class="web">
+  <a href="https://www.instagram.com/_zoric_d/" target="_blank">
+    <img src="img/social.png" alt="Instagram" class="social-icon">
+    <span>Web by Danijel</span>
+  </a>
+</div>
+
+</body>
+</html>

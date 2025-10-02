@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerija</title>
+  <link rel="stylesheet" href="galerija.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/Logo crno.png" type="image/png">
+  <script defer src="slider.js"></script>
+</head>
+<body>
+  <!-- NAVBAR (isti kao na ostalim stranicama) -->
+  <header class="navbar">
+  <div class="logo">
+    <img src="img/Logo crno.png" alt="Logo" />
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">POČETNA</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="omeni.html">O MENI</a>
+    <a href="kontakt.html">KONTAKT</a>
+  </nav>
+</header>
+
+  <!-- GALERIJA -->
+  <main class="gallery-container">
+    <button class="nav-btn left" id="prevBtn">&#10094;</button>
+    <div class="gallery-wrapper">
+      <div class="gallery-track">
+        <img src="img/slika1.jpg" alt="Foto 1" class="gallery-item" />
+        <img src="img/slika2.jpg" alt="Foto 2" class="gallery-item" />
+        <img src="img/slika3.jpg" alt="Foto 3" class="gallery-item" />
+        <!-- Dodaj koliko god slika hoćeš -->
+      </div>
+    </div>
+    <button class="nav-btn right" id="nextBtn">&#10095;</button>
+  </main>
+
+  <footer class="footer">
+    <p>Jedan kadar. Večna emocija. Za svaki trenutak koji zaslužuje da traje zauvek</p>
+    <p><a class="contact-button" href="kontakt.html">Kontaktiraj me</a></p>
+  </footer>
+
+  <div class="web">
+  <a href="https://www.instagram.com/_zoric_d/" target="_blank">
+    <img src="img/social.png" alt="Instagram" class="social-icon">
+    <span>Web by Danijel</span>
+  </a>
+</div>
+</body>
+</html>
